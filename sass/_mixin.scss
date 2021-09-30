@@ -1,0 +1,47 @@
+// MEDIA QUERY MANAGER
+/*
+0-335px: Min-Phone (Small Phone)
+0-600px: Phone
+600-900px: Tablate Portrait
+900-1200px: Tablate Landscape
+[1200-1800px] is where our normal style apply
+1800px + : Big Desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == minphone {
+    @media (max-width: 335px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (max-width: 1480px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm-desktop {
+    @media (max-width: 1380px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!-- Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="./css/theme/main.css">
+    <!-- Vendor Css Files -->
+</head>
+
+<body>
+    <main>
+        <div class="container-full">
+            <!-- Main section -->
+            <section>
+                <!-- Left part of main section -->
+                <div class="left">
+                    <div class="sec">
+                        <div class="form-head">
+                            <h1>Let's set up your account</h1>
+                            <p>Already have an account? <a href="#">Sign in</a></p>
+                        </div>
+                        <div class="form">
+                            <form action="" id="form">
+                                <div class="form-input">
+                                    <input type="text" name="username" id="name" placeholder="Your name">
+                                    <label for="name" class="brd">Your name</label>
+                                </div>
+                                <div class="form-input">
+                                    <input autocomplete="off" type="text" class="validate-mail" name="useremail"
+                                        id="email" placeholder="Email address" onkeydown="validation()">
+                                    <label for="email" class="brd">Email address</label>
+                                    <span class="valid-mail" id="text"></span>
+                                </div>
+                                <div class="form-input">
+                                    <select name="user_type_value" id="user_type">
+                                        <option selected disabled>I would describe my user type as</option>
+                                        <option value="admin">admin</option>
+                                        <option value="user">user</option>
+                                    </select>
+                                </div>
+                                <div class="form-input">
+                                    <input type="password" name="user_password" id="password" placeholder="Password">
+                                    <label for="password" class="brd">Password</label>
+                                    <p class="helper">Minimum 8 characters</p>
+                                </div>
+                                <div class="form-input">
+                                    <button href="#" class="btn btn-lrg">Next</button>
+                                </div>
+                                <div class="form-bottom">
+                                    <p>By clicking "Next" button, you agree to creation a free account, and to
+                                        <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right part of main section -->
+                <div class="right">
+                    <div class="sec">
+                        <div class="head">
+                            <h1>Dummy Heading</h1>
+                        </div>
+                        <div class="body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsa incidunt asperiores
+                                ratione architecto nam iste harum.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/js/theme/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$grid-width: 1140px;
+$gutter-verticle: 80px;
+$gutter-horizontal: 60px;
+$gap: 75px;
+$gapm: 45px;
+
+html {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px  = 62.5%  -> 1rem  = 10px
+  overflow-y: scroll;
+
+  @include respond(tab-port) {
+    //width < 900
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(tab-land) {
+    //width < 1200
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(big-desktop) {
+    //width < 1200
+    font-size: 75%; // 1rem = 12px
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+.container_sp {
+  max-width: 1350px;
+  margin: auto;
+
+  @include respond(big-desktop) {
+    margin: 0 40px;
+  }
+
+  @include respond(phone) {
+    margin: 0 15px;
+  }
+}
